@@ -1,6 +1,6 @@
 # To-do list app
 
-This To-do list PWA focuses on a clean interface where you can add tasks and start accomplishing them in no time
+This To-do list PWA focuses on a clean interface where you can add tasks and start accomplishing them within time
 
 ## Built with
 
