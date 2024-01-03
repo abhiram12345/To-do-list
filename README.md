@@ -4,14 +4,14 @@ This To-do list PWA focuses on a clean interface where you can add tasks and sta
 
 ## Built with
 
-HTML
-CSS
-JavaScript
-React
-Bootstrap
+*HTML
+*CSS
+*JavaScript
+*React
+*Bootstrap
 
 ## Features
 
-Add and delete tasks
-Add due date
-Offline support
+*Add and delete tasks
+*Add due date
+*Offline support
