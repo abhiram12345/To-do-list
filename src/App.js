@@ -4,12 +4,16 @@ import AddItem from './components/AddTask';
 import { useEffect, useState } from 'react';
 import TasksList from './components/TasksList';
 import { connectDB } from './db';
+import { useMediaQuery } from 'react-responsive';
 
 function App() {
   const [tasks, setTasks] = useState([]);
   const [view, setView] = useState('tasks');
   const [newTaskName, setNewTaskName] = useState('');
   const [time, setTime] = useState('');
+  const isDesktopScreen = useMediaQuery({
+    query:'(min-width:1224px)'
+  })
   const callSetTasks = (data, replace)=>{
     if(replace){
       setTasks([...data]);
@@ -50,7 +54,7 @@ function App() {
       <header className="w-100 bg-primary p-3 text-light text-center">
         <h3>To-Do List</h3>
       </header>
-      <div className='mx-auto w-50 shadow-sm p-4 rounded mt-3 h-75 position-relative'>
+      <div className={`mx-auto shadow-sm p-4 rounded mt-3 h-75 position-relative ${isDesktopScreen ? 'w-50' : 'w-75'}`}>
       <TasksList tasks={tasks} view={view} callSetTasks={callSetTasks}/>
       <AddItem view={view} callSetTasks={callSetTasks} callSetView={callSetView} name={newTaskName} callSetNewTaskName={callSetNewTaskName} time={time} callSetTime={callSetTime}/>
       <AddButton onClick={()=>{
