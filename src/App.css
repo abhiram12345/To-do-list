@@ -1,24 +1,3 @@
-.my-modal-backdrop{
-  position: fixed;
-  background-color: rgb(136,136,136, 0.4);
-  z-index: 2;
-  top:0;
-  left:0;
-  height: 100%;
-  width: 100%;
-}
-.my-modal{
-  position: fixed;
-  background-color: white;
-  width:300px;
-  z-index: 2;
-  padding: 25px;
-  border-radius: 5px;
-  left:50%;
-  top: 50%;
-  color: #303030;
-  transform: translate(-50%, -50%);
-}
 input[type='text'].normal{
   display: block;
   width: 70%;
@@ -41,7 +20,6 @@ input[type='datetime-local'].normal{
   margin: 10px auto;
   box-sizing: border-box;
 }
-
 .text-label {
   display: block;
   width:70%;
@@ -53,4 +31,15 @@ input[type='datetime-local'].normal{
 }
 .task-body:hover .delete-bttn{
   visibility: visible;
+}
+@media only screen and (max-width:1224px){
+  input[type='text'].normal{
+    width:80%
+  }
+  input[type='datetime-local'].normal{
+    width:80%
+  }
+  .text-label {
+    width: 80%;
+  }
 }

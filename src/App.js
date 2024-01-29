@@ -54,7 +54,9 @@ function App() {
       <header className="w-100 bg-primary p-3 text-light text-center">
         <h3>To-Do List</h3>
       </header>
-      <div className={`mx-auto shadow-sm p-4 rounded mt-3 h-75 position-relative ${isDesktopScreen ? 'w-50' : 'w-75'}`}>
+      <div className="mx-auto shadow-sm p-4 rounded mt-3 h-75 position-relative" style={{
+        width: isDesktopScreen ? '50%' : '90%'
+      }}>
       <TasksList tasks={tasks} view={view} callSetTasks={callSetTasks}/>
       <AddItem view={view} callSetTasks={callSetTasks} callSetView={callSetView} name={newTaskName} callSetNewTaskName={callSetNewTaskName} time={time} callSetTime={callSetTime}/>
       <AddButton onClick={()=>{
