@@ -4,7 +4,7 @@ import catImg from '../cat.png';
 export default function TasksList({tasks, callSetTasks}){
     return( 
     <div className="overflow-y-auto" style={{height:'90%', overflowY:'auto'}}>
-    {tasks.length > 0 ? tasks.map((task)=> <Task task={task} tasks={tasks} callSetTasks={callSetTasks}/>) : 
+    {tasks.length > 0 ? tasks.map((task)=> <Task task={task} tasks={tasks} callSetTasks={callSetTasks} key={task.id}/>) : 
     <div className="position-absolute" style={{
         left:'50%',
         top:'50%',

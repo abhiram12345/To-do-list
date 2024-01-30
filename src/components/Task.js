@@ -48,7 +48,7 @@ export default function Task({task, tasks, callSetTasks}){
         <button className='bg-transparent border border-1 d-flex justify-content-center align-items-center ms-3' style={{
             width:'22px',
             height:'22px',
-            borderColor:'lightgray'
+            borderColor:'gray'
         }} onClick={()=>{
             connectDB(handleClick);
         }}>{isDone &&
